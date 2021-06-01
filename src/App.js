@@ -12,11 +12,15 @@ function App() {
     color: "Azul",
   }
 
+  const saludarFn = () => {
+    console.log("Hola " + user.nombre);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Saludar userInfo = {user}></Saludar>
+        <Saludar userInfo = {user} saludarFn = {saludarFn}></Saludar>
       </header>
     </div>
   );
