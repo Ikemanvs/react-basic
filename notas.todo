@@ -1,15 +1,8 @@
-Como se pasan las propiedades en React:
-    ☐ Dentro de la funcion default de mi componente, se recibe el parametro "props"
-    ☐ "props" es un arreglo que recibe las propiedades que se envien desde cualquier otro componente
-    ☐ Si por ejemplo, tengo la siguiente estructura en App.js:
-        <Saludar name="Agustin Navarro"></Saludar>
-        <Saludar name="Paco"></Saludar>
-    ☐ la propiedad "name" estara siendo recibida por "props", y para utilizar esa propiedad, en mi componente Saludar.js, se veria como:
-        export default function Saludar(props) <- aqui esta props {
-            console.log(props.name)
-            return (
-                <div>
-                    <h2>Hola {props.name}</h2> <-asi es como se imprime
-                </div>
-            )
-        }
+Como se usan las variables en una funcion recibida de otro componente?:
+    ☐ Si a la funcion recibida de otro componente se le pasa una variable, la funcion se ejecutara y no esperará al evento asignado (por ejemplo, al onClick)
+    <button onClick={props.saludarFn(props.userInfo.nombre)}>
+    ☐ Al llegar a los parentesis de la funcion "saludarFn" se ejecutara automaticamente dicha funcion, sin respetar el evento
+
+    ☐ Es necesario poner dentro de la ejecución de la funcion una arrow function (funcion anonima)
+    <button onClick={ () => props.saludarFn(props.userInfo.nombre)}>
+    ☐ De esta manera, se espera que se ejecute el evento asignado

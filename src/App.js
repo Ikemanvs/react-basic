@@ -12,8 +12,8 @@ function App() {
     color: "Azul",
   }
 
-  const saludarFn = () => {
-    console.log("Hola " + user.nombre);
+  const saludarFn = (name) => {
+    console.log("Hola " + name);
   }
 
   return (
