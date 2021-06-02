@@ -6,6 +6,10 @@ import Saludar from "./components/Saludar";
 
 function App() {
 
+  const saludarFn = (nombre) => {
+    console.log("Hola " + nombre);
+  }
+
   const user = {
     nombre: "Agustin Navarro Galdon",
     edad: 26,
@@ -16,7 +20,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Saludar userInfo = {user}></Saludar>
+        <Saludar userInfo = {user} saludarFn={saludarFn}></Saludar>
       </header>
     </div>
   );

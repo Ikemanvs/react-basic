@@ -1,15 +1,7 @@
-Como se pasan las propiedades en React:
-    ☐ Dentro de la funcion default de mi componente, se recibe el parametro "props"
-    ☐ "props" es un arreglo que recibe las propiedades que se envien desde cualquier otro componente
-    ☐ Si por ejemplo, tengo la siguiente estructura en App.js:
-        <Saludar name="Agustin Navarro"></Saludar>
-        <Saludar name="Paco"></Saludar>
-    ☐ la propiedad "name" estara siendo recibida por "props", y para utilizar esa propiedad, en mi componente Saludar.js, se veria como:
-        export default function Saludar(props) <- aqui esta props {
-            console.log(props.name)
-            return (
-                <div>
-                    <h2>Hola {props.name}</h2> <-asi es como se imprime
-                </div>
-            )
-        }
+Destructuring:
+    ☐ Para evitar acceder a variables con mucha profundidad en un array, se utiliza el Destructuring
+    ☐ Esto es, dentro de un array ponemos las propiedades de nuestro "props" principal
+    ☐ Una vez transpiladas, podemos usarlas como variables normales, por ejemplo
+    const { nombre, edad } = props;
+    return 'Hola ' + nombre
+    La funcion de arriba es mas sencilla que usar nombre como "props.nombre" y es mas legible
