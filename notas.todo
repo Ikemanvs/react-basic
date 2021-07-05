@@ -1,7 +1,13 @@
-Destructuring:
-    ☐ Para evitar acceder a variables con mucha profundidad en un array, se utiliza el Destructuring
-    ☐ Esto es, dentro de un array ponemos las propiedades de nuestro "props" principal
-    ☐ Una vez transpiladas, podemos usarlas como variables normales, por ejemplo
-    const { nombre, edad } = props;
-    return 'Hola ' + nombre
-    La funcion de arriba es mas sencilla que usar nombre como "props.nombre" y es mas legible
+Props por defecto:
+    ☐ Al momento de usar una aplicacion, es probable que a las personas no les de por llenar todos los campos, por lo cual, habra valores sin definir
+    ☐ Si a un usuario le presentamos undefined, de seguro se espanta y te dice que no sirve
+    ☐ Para eso, tenemos las propiedades por defecto
+    ☐ En este caso, borramos el nombre
+    ☐ Si el nombre no viene, la aplicacion nos va a mostrar "Hola undefined" al momento de hacer el saludo
+    ☐ Una propiedad por defecto es una validación para evitar que el usuario deje campos vacios, los cuales tendran un valor predeterminado
+    ☐ Para definir una prop por defecto, al momento de declararla usamos:
+
+    const { nombre = "Anonimo" } = userInfo;
+
+    ☐ Esto quiere decir "si la propiedad userInfo viene vacia, nombre va a ser igual a 'Anonimo', en caso contrario, sera el valor de userInfo"
+    

@@ -11,7 +11,6 @@ function App() {
   }
 
   const user = {
-    nombre: "Agustin Navarro Galdon",
     edad: 26,
     color: "Azul",
   }
