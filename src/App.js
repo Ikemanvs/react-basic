@@ -1,18 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-//import HolaMundo from "./components/HolaMundo";
-//import AdiosMundo from "./components/AdiosMundo";
 import Saludar from "./components/Saludar";
 
 function App() {
 
-  const saludarFn = (nombre) => {
-    console.log("Hola " + nombre);
-  }
-
   const user = {
+    nombre: "Agustin Navarro Galdon",
     edad: 26,
     color: "Azul",
+  }
+
+
+  const saludarFn = (nombre, edad) => {
+    console.log(`Hola ${nombre}, tiene ${edad} años.`);
   }
 
   return (

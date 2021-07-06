@@ -1,13 +1,15 @@
-Props por defecto:
-    ☐ Al momento de usar una aplicacion, es probable que a las personas no les de por llenar todos los campos, por lo cual, habra valores sin definir
-    ☐ Si a un usuario le presentamos undefined, de seguro se espanta y te dice que no sirve
-    ☐ Para eso, tenemos las propiedades por defecto
-    ☐ En este caso, borramos el nombre
-    ☐ Si el nombre no viene, la aplicacion nos va a mostrar "Hola undefined" al momento de hacer el saludo
-    ☐ Una propiedad por defecto es una validación para evitar que el usuario deje campos vacios, los cuales tendran un valor predeterminado
-    ☐ Para definir una prop por defecto, al momento de declararla usamos:
+Template strings:
+    ☐ Para facilitar el uso de las variables en la impresion del HTML, podemos usar las plantillas de texto (template string)
+    ☐ Para usar una, lo que se vaya a imprimir debe ir entre comillas invertidas (``)
+    ☐ Todo lo que vaya dentro de esas comillas se puede interpretar como texto o incluso como HTML, y aqui podemos usar variables facilmente tambien
+    ☐ Para usar una variable dentro de una template string, se usa como ${variable}
+    ☐ Solo hay que reemplazar el valor de variable por el nombre de la variable que se quiere ver, y listo
+    ☐ Ojo: todo lo que este dentro de las comillas invertidas es la template string, si algo queda afuera pues ya no seria parte de eso
+    ☐ Tambien, para darle mejor estructura, puedes escribir HTML naturalmente, como:
+    `
+    <div>
+        este es mi ${objeto} y me gusta mucho
+    </div>
+    `;
 
-    const { nombre = "Anonimo" } = userInfo;
-
-    ☐ Esto quiere decir "si la propiedad userInfo viene vacia, nombre va a ser igual a 'Anonimo', en caso contrario, sera el valor de userInfo"
-    
+    ✔ Esto se ve mejor que tener HTML mas estructurado en una linea (buena practica) @done (5/7/2021 18:38:36)
