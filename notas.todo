@@ -1,15 +1,4 @@
-Como se pasan las propiedades en React:
-    ☐ Dentro de la funcion default de mi componente, se recibe el parametro "props"
-    ☐ "props" es un arreglo que recibe las propiedades que se envien desde cualquier otro componente
-    ☐ Si por ejemplo, tengo la siguiente estructura en App.js:
-        <Saludar name="Agustin Navarro"></Saludar>
-        <Saludar name="Paco"></Saludar>
-    ☐ la propiedad "name" estara siendo recibida por "props", y para utilizar esa propiedad, en mi componente Saludar.js, se veria como:
-        export default function Saludar(props) <- aqui esta props {
-            console.log(props.name)
-            return (
-                <div>
-                    <h2>Hola {props.name}</h2> <-asi es como se imprime
-                </div>
-            )
-        }
+Hook de efecto:
+    ☐ Se ejecuta cuando el componente ya fue montado, primero se ejecuta el componente y despues el Hook
+    ☐ Al detectar que la variable cambia, el hook lo detecta y reacciona, en el ejemplo hace un log en consola mostrando cuantas veces se presiono el boton,
+        tambien actualiza la vista
